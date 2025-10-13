@@ -1,11 +1,13 @@
+# src/person.py
+
 class Person:
     """
     Clase Person que representa una persona con nombre y apellido.
     
-    Esta clase implementa el método especial __str__ para mostrar
+    Implementa el método especial __str__ para mostrar
     el nombre completo de la persona en formato capitalizado.
     """
-    
+
     def __init__(self, first_name, last_name):
         """
         Inicializa una persona con nombre y apellido.
@@ -15,20 +17,20 @@ class Person:
             last_name (str): El apellido de la persona
         """
         self.first_name = first_name
-        self.last_name = last_name  # ❌ No se devuelve nada aquí
-    
+        self.last_name = last_name
+
     def __str__(self):
         """
         Retorna una representación en string de la persona.
-        
+
         El formato es "Nombre Apellido" con la primera letra de cada
         palabra en mayúscula (capitalizado).
-        
+
         Returns:
             str: Nombre completo capitalizado
         """
-        return f"{self.first_name.capitalize()} {self.last_name.capitalize()}"
-
+        # title() capitaliza correctamente nombres compuestos
+        return f"{self.first_name.title()} {self.last_name.title()}"
 
 # Ejemplo de uso
 if __name__ == "__main__":
