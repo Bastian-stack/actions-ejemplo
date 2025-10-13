@@ -15,12 +15,9 @@ class Person:
             last_name (str): El apellido de la persona
         """
         self.first_name = first_name
-        self.last_name = last_name
-        return first_name, last_name
+        self.last_name = last_name  # ❌ No se devuelve nada aquí
     
     def __str__(self):
-
-
         """
         Retorna una representación en string de la persona.
         
@@ -31,17 +28,14 @@ class Person:
             str: Nombre completo capitalizado
         """
         return f"{self.first_name.capitalize()} {self.last_name.capitalize()}"
-            
 
 
-# Ejemplo de uso (opcional, para pruebas locales)
+# Ejemplo de uso
 if __name__ == "__main__":
-    # Crear personas de ejemplo
     p1 = Person("juan", "perez")
     p2 = Person("MARIA", "LOPEZ")
     p3 = Person("cArLoS", "gOnZaLeZ")
-    
-    # Imprimir usando __str__ automáticamente
+
     print(p1)  # Juan Perez
     print(p2)  # Maria Lopez
     print(p3)  # Carlos Gonzalez
