@@ -1,5 +1,3 @@
-# src/person.py
-
 class Person:
     """
     Clase Person que representa una persona con nombre y apellido.
